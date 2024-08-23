@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header id="header">
+
+    <img src="https://scufgaming.com/static/version1722950474/frontend/ScufGaming/default/en_US/images/logo.svg" alt="scuf-logo" id="header-img">
+    <nav id="nav-bar">
+      <a href="#overview" class="nav-link">OVERVIEW</a>
+      <a href="#features" class="nav-link">FEATURES</a>
+      <a href="#contact" class="nav-link">CONTACT</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="overview">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>DON'T GET<br>GOOD.<br>GET GREAT.</h1>
+          <p><span class="bold">SCUF ENVISION.</span> DESIGNED FOR PC GAMING.</p>
+          <span class="bold yellow">Starting at $129.99</span>
+          <a href="#contact" class="button block">CONTACT</a>
+        </div>
+        <img class="hero-img" src="https://scufgaming.com/media/prismic/f18f6a05-b3d7-4e49-90d0-84a9ee68a132_envision_compare_model_pro_steel_gray_front_850x600.webp" alt="scuf-envision-controller">  
+      </div>
+    </section>
+    <section class="second-section">
+      <div class="second-section-content">
+        <div class="second-section-text">
+          <h2>PERFORMANCE GAMING DESIGNED FOR PC.</h2>
+          <p>11 additional remappable inputs. Ultra-fast wireless connectivity. Advanced configuration software to push customization like never before. More control, more finesse, and more performance than your typical console controller. </p>
+          <a href="#modal-container" class="modal-trigger button">WATCH VIDEO</a>
+        </div>
+        <div class="modal-container" id="modal-container">
+          <div class="modal">
+            <a href="#" class="close">&times;</a>
+            <div class="modal-content">
+              <video id="video" src="https://scufgaming.com/media/prismic/6785cf98-2cfe-47cc-b04f-3d47388d7421_Envision_Product_Features_Full_Global_16x9_R3.mp4" controls></video>
+            </div>
+          </div>
+        </div>      
+      </div>     
+    </section>
+    <section class="third-section" id="features">
+      <h2>FEATURES</h2>
+      <div class="content-block">
+        <div class="content-text">
+          <h3>FULLY PROGRAMMABLE <br>G-KEYS</h3>
+          <p>Five on-board buttons ready for any function you need. Simple Windows shortcuts. Advanced macros. Another button to map to your ‘Y’ button. The possibilities are endless.</p>
+        </div>       
+        <img src="https://scufgaming.com/media/prismic/6337257b-c0d4-4e96-a15d-244d8ab98f5b_envision_feature_gkeys_pc_controller_750x750.jpg" alt="control-image">
+      </div>
+      <div class="content-block">
+        <img src="https://scufgaming.com/media/prismic/b3a25283-aaf2-4962-8a5f-7a2f2ee2a30a_envision_feature_paddles_pc_controller_750x750.jpg" alt="control-image">
+        <div class="content-text">
+          <h3>REMAPPABLE PADDLES</h3>
+          <p>Our next-gen paddles are ergonomically positioned in the back of the controller for a natural feel and quick response. Assign actions by remapping them to any of the ABXY or D-Pad functions to keep your thumbs on the sticks for faster reactions.</p>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="content-text">
+          <h3>SIDE-ACTION (SAX) BUTTONS</h3>
+          <p>Two unique side-mounted SAX buttons are designed to provide additional configurability and fit the natural placement of your index fingers. Remap actions to the SAX buttons to keep your thumbs on the sticks for faster reactions and gameplay.</p>
+        </div>       
+        <img src="https://scufgaming.com/media/prismic/5e6ceada-67a3-4d9c-920a-f3fbcd5d0c5d_envision_feature_sax_pc_controller_750x750.jpg" alt="control-image">
+      </div>
+      <div class="content-block">
+        <img src="https://scufgaming.com/media/prismic/c389ce11-4861-4737-bbf7-a3d73726cc9a_envision_feature_triggers_pc_controller_750x750.jpg" alt="control-image">
+        <div class="content-text">
+          <h3>ADJUSTABLE INSTANT TRIGGERS</h3>
+          <p>Best of both worlds, no more picking and choosing with Adjustable Instant Triggers. Go from having a mouse-like click for your favorite shooter games to a smooth to a full range pull for RPG and racing style games with a simple flip of a switch. Available only on Envision Pro.</p>
+        </div>      
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <h4>GET IN TOUCH</h4>
+      <div class="contact-form">
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <label for="name">Name:</label>
+          <input type="text" placeholder="Jhon Doe" name="name" id="name">
+          <label for="phone">Phone:</label>
+          <input type="tel" placeholder="+1 (809) 584 3433" name="phone" id="phone">
+          <label for="email">Mail:</label>
+          <input type="email" placeholder="youremail@mail.com" name="email" id="email">
+          <div class="form-button">
+            <input class="button" type="submit" name="submit" id="submit" value="Submit">
+          </div>                
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>Design by<span class="bold yellow"> Berling Guzman</span></footer>
+  
+</body>
+</html>

@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    color: rgb(225, 225, 225);
+    background-color: #000000;
+    font-family: "Geist",sans-serif;
+    font-size: 14px;
+    line-height: 2;
+    position: relative;
+}
+
+.nav-divider {
+    margin-right: 30px;
+    border: 2px solid #313131;
+}
+
+.divider {
+    margin: 65px 0px 40px 0px;
+    border: 1px solid #313131;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Nav Bar */
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    height: 100vh;
+    padding: 20px 20px 20px 20px;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    display: block;
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+#navbar header {
+    font-size: large;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#navbar a {
+    display: block;
+    text-decoration: none;
+    color: #919191;
+    font-size: 14px;
+}
+
+#navbar a:active {
+    color: rgb(68, 52, 210);
+}
+
+#navbar a:hover {
+    color: rgb(198, 198, 198);
+}
+
+/* Main Content */
+
+#main-doc {
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+    padding: 65px 20px 20px 20px;
+}
+
+.main-section header {
+    font-size: 2em;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: white;
+}
+
+.main-section li{
+    margin-left: 40px;
+}
+
+.main-section p {
+    margin-bottom: 40px;
+}
+
+.main-section a {
+    color: #9993ff;
+}
+
+code {
+    background-color: #313131;
+    padding: 2px;
+    border: 1px solid #919191;
+    border-radius: 4px;
+}
+
+.code-large {
+    display: block;
+    border: 2px solid #313131;
+    width: 100%;
+    border-radius: 2px;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: #0d0810;
+    font-family: "Geist Mono";
+    font-size: small;
+    line-height: 1.5;
+}
+
+.main-section li {
+    margin-bottom: 20px;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+
+/* Media queries */
+
+@media only screen and (max-width: 1200px) {
+    #navbar {
+        display: none;
+    }
+
+    .nav-divider {
+        display: none;
+    }
+
+}
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXT JS Installation Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <header><span class="logo">NEXT JS</span>Installation Guide</header>
+        <a href="#system_requirements">System Requirements</a>
+        <a href="#automatic_installation">Automatic Installation</a>
+        <a href="#manual_installation">Manual Installation</a>
+        <a href="#creating_directories">Creating Directories</a>
+        <a href="#run_the_development_server">Run the Development Server</a>
+    </nav>
+    <hr class="nav-divider">
+    <main id="main-doc">
+        <section class="main-section" id="system_requirements">
+            <header>System Requirements</header>
+            <ul>
+                <li><a href="https://nodejs.org/en">Node.js 18.17</a> or later.</li>
+                <li>macOS, Windows (including WSL), and Linux are supported.</li>
+            </ul>
+        </section>
+        <hr class="divider">
+        <section class="main-section" id="automatic_installation">
+            <header>Automatic Installation</header>
+            <p>We recommend starting a new Next.js app using <code><a href="https://nextjs.org/docs/app/api-reference/create-next-app">create-next-app</a></code>, which sets up everything automatically for you. To create a project, run:</p>
+            <pre><code class="code-large">npx create-next-app@latest</code></pre>
+            <p>On installation, you'll see the following prompts:</p>
+            <pre><code class="code-large">
+What is your project named? my-app
+Would you like to use TypeScript? No / Yes
+Would you like to use ESLint? No / Yes
+Would you like to use Tailwind CSS? No / Yes
+Would you like to use `src/` directory? No / Yes
+Would you like to use App Router? (recommended) No / Yes
+Would you like to customize the default import alias (@/*)? No / Yes
+What import alias would you like configured? @/*
+            </code></pre>
+            <p>After the prompts, <code>create-next-app</code> will create a folder with your project name and install the required dependencies.</p>
+            <p>If you're new to Next.js, see the <a href="https://nextjs.org/docs/getting-started/project-structure">project structure</a> docs for an overview of all the possible files and folders in your application.</p>
+        </section>
+        <hr class="divider">
+        <section class="main-section" id="manual_installation">
+            <header>Manual Installation</header>
+            <p>To manually create a new Next.js app, install the required packages:</p>
+            <pre><code class="code-large">npm install next@latest react@latest react-dom@latest</code></pre>
+            <p>Open your <code>package.json</code> file and add the following <code>scripts</code>:</p>
+            <pre><code class="code-large">
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  }
+}
+            </code></pre>
+            <p>These scripts refer to the different stages of developing an application:</p>
+            <ul>
+                <li><code>dev:</code> runs <code><a href="https://nextjs.org/docs/app/api-reference/next-cli#development">next dev</a></code> to start Next.js in development mode.</li>
+                <li><code>build</code>: runs <code><a href="https://nextjs.org/docs/app/api-reference/next-cli#build">next build</a></code> to build the application for production usage.</li>
+                <li><code>start</code>: runs <code><a href="https://nextjs.org/docs/app/api-reference/next-cli#production">next start</a></code> to start a Next.js production server.</li>
+                <li><code>lint</code>: runs <code><a href="https://nextjs.org/docs/app/api-reference/next-cli#lint">next lint</a></code> to set up Next.js' built-in ESLint configuration.</li>
+            </ul>
+        </section>
+        <hr class="divider">
+        <section class="main-section" id="creating_directories">
+            <header>Creating Directories</header>
+            <p>Next.js uses file-system routing, which means the routes in your application are determined by how you structure your files.</p>
+            <h4>The <code>app</code> directory</h4>
+            <p>For new applications, we recommend using the <a href="https://nextjs.org/docs/app">App Router</a>. This router allows you to use React's latest features and is an evolution of the <a href="https://nextjs.org/docs/pages">Pages Router</a> based on community feedback.</p>
+            <p>Create an <code>app/</code> folder, then add a <code>layout.tsx</code> and <code>page.tsx</code> file. These will be rendered when the user visits the root of your application (<code>/</code>).</p>
+            <p>Create a <a href="https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required">root layout</a> inside <code>app/layout.tsx</code> with the required <code>html</code> and <code>body</code> tags:</p>
+            <pre><code class="code-large">
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    html lang="en">
+      body>{children}/body>
+    html>
+  )
+}
+            </code></pre>
+            <p>Finally, create a home page <code>app/page.tsx</code> with some initial content:</p>
+            <pre><code class="code-large">
+export default function Page() {
+  return h1>Hello, Next.js!/h1>
+}
+            </code></pre>
+        </section>
+        <hr class="divider">
+        <section class="main-section" id="run_the_development_server">
+            <header>Run the Development Server</header>
+            <ol>
+                <li>Run <code>npm run dev</code> to start the development server.</li>
+                <li>Visit <code>http://localhost:3000</code> to view your application.</li>
+                <li>Edit <code>app/page.tsx</code> (or <code>pages/index.tsx</code>) file and save it to see the updated result in your browser.</li>
+            </ol>
+        </section>
+        <hr class="divider">
+    </main>
+
+
+</body>
+</html>
