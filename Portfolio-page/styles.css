@@ -52,9 +52,7 @@ ol, ul {
 
 .title {
   font-family: "Inter",sans-serif;
-  font-optical-sizing: auto;
   font-weight: 800;
-  font-style: normal;
   transition: all 0.3s ease-in-out;
 }
 
@@ -72,6 +70,11 @@ ol, ul {
   font-weight: 300;
   font-style: normal;
   color: var(--light-text-normal);
+  transition: all 0.3s ease-in-out;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  text-wrap: pretty;
+  color: var(--light-text-grey);
   transition: all 0.3s ease-in-out;
 }
 
@@ -243,6 +246,7 @@ a {
   margin-top: -70px;
   padding-top: 70px;
   transition: all 0.3s ease-in-out;
+  overflow:hidden;
 }
 
 .hero_container {
@@ -311,6 +315,8 @@ span {
 
 .title_desk p {
   color: var(--light-text-grey);
+  padding-left: 30px;
+  text-wrap: balance;
   transition: all 0.3s ease-in-out;
 }
 
@@ -365,7 +371,7 @@ span {
 .card {
   box-shadow: 0px 0px 40px 0px #00000020;
   border-radius: 5px;
-  padding: 4rem 1rem;
+  padding: 3rem 1.5rem;
   max-width: 500px;
   background-color: var(--light-200);
   transition: all 0.3s ease-in-out;
@@ -382,11 +388,6 @@ span {
 
 .card p {
   text-align: center;
-  font-size: 1.4rem;
-  line-height: 2.5rem;
-  text-wrap: pretty;
-  color: var(--light-text-grey);
-  transition: all 0.3s ease-in-out;
 }
 
 .technologies_container {
@@ -395,6 +396,7 @@ span {
   margin-top: 5rem;
   gap: 1rem;
   transition: all 0.3s ease-in-out;
+  flex-wrap: wrap;
 }
 
 .technologies_img {
@@ -464,6 +466,32 @@ span {
   box-shadow: 0px 0px 20px 0px #10121433;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.background_img .image_1 {
+  position: absolute;
+  width: 40px;
+  bottom: 5rem;
+  left: 0.5rem;
+  animation: blinking 3s infinite ease-in-out;
+}
+
+.background_img .image_2 {
+  position: absolute;
+  width: 40px;
+  bottom: 9rem;
+  left: 0.5rem;
+  animation: blinking 3s infinite ease-in-out;
+}
+
+@keyframes blinking {
+  0%{
+    opacity: 1;
+  }
+  50% {
+    opacity: .4;
+  }
 }
 
 .grid_container {
@@ -474,7 +502,7 @@ span {
 }
 
 .grid_card-1 {
-  background-image: url(https://raw.githubusercontent.com/berlinguzman/Prueba-Git/main/projects-img/Screenshot%202024-08-23%20at%2022-21-08%20Survey%20Form%20Build%20a%20Survey%20Form%20freeCodeCamp.org.png);
+  background-image: url(https://raw.githubusercontent.com/berlinguzman/Prueba-Git/main/projects-img/Screenshot%202024-08-25%20at%2000-13-25%20Survey%20Form.png);
   background-position: top;
 }
 
@@ -505,9 +533,121 @@ span {
   transition: all 0.3s ease-in-out;
 }
 
+/* CONTACT SECTION */
+
+.contact_container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8rem;
+}
+
+.contact_data h3 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.contact_data p {
+  text-align: center;
+  text-wrap: balance;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-300);
+  padding: 4rem 2rem;
+  border-radius: 15px;
+  transition: all .3s ease-in-out;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  min-width: inherit;
+}
+
+.form_name-first-last {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_container label {
+  display: block;
+  font-family: "Inter",sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--light-text-normal);
+  margin-bottom: 1rem;
+  transition: all .3s ease-in-out;
+}
+
+.form_container-input {
+  font-family: "Roboto",sans-serif;
+  padding: 1.5rem 0 1.5rem 1.5rem ;
+  margin-bottom: 4rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.7rem;
+  font-weight: 400;
+  background-color: var(--light-200);
+  color: var(--light-text-grey);
+  transition: all .3s ease-in-out;
+
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.submit_container {
+  display: flex;
+  justify-content: center;
+}
+
+#submit {
+  background: linear-gradient(109.6deg, rgb(123, 90, 224) 11.2%, rgb(164, 46, 253) 32.6%, rgb(213, 56, 234) 62.7%, rgb(251, 138, 52) 100.2%);
+  color: var(--dark-text-title);
+  font-size: 2.4rem;
+  margin: 0;
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+}
+
+
 /* MEDIA QUERIES */
 
 @media (min-width:768px){
+
+  .contact_container {
+    flex-direction: row-reverse;
+    gap: 3rem;
+  }
+
+  .form_container {
+    max-width: 500px;
+  }
+
+  fieldset {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ 
+  }
+
+  .contact_data h3 {
+    text-align: left;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact_data p {
+    text-align: left;
+    text-wrap: pretty;
+  }
 
   .page_width {
     max-width: 1000px;
