@@ -145,7 +145,7 @@ a {
   box-shadow: 0px -5px 20px 5px #2C333A33;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10000;
   transition: all 0.3s ease-in-out;
 }
 
@@ -264,6 +264,23 @@ a {
   justify-content: center;
   gap: 3rem;
   transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.profile::before {
+  display: none;
+  position: absolute;
+  content: '';
+  height: 101%;
+  width: 101%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  border: 2px solid tomato;
+  animation: animate 2s linear infinite;
+  z-index: -1;
 }
 
 .name {
@@ -364,17 +381,45 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   transition: all 0.3s ease-in-out;
 }
 
 .card {
   box-shadow: 0px 0px 40px 0px #00000020;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 3rem 1.5rem;
   max-width: 500px;
+  place-items: center;
   background-color: var(--light-200);
   transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.card::before {
+  position: absolute;
+  content: '';
+  height: 101%;
+  width: 101%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  border: 2px solid tomato;
+  animation: animate 2s linear infinite;
+  z-index: -1;
+}
+
+/* .card:hover::before {
+  height: 103%;
+  width: 101.5%;
+} */
+
+@keyframes animate {
+  50%{
+    filter: hue-rotate(350deg);
+  }
 }
 
 .card h3, .normal {
@@ -394,26 +439,35 @@ span {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
-  gap: 1rem;
+  gap: 3rem;
   transition: all 0.3s ease-in-out;
   flex-wrap: wrap;
 }
 
 .technologies_img {
   max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   box-shadow: 0px 0px 40px 0px #00000020;
   margin: 0.5rem 0rem;
   padding: 2rem;
   border-radius: 5px;
   background-color: var(--light-200);
   transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
 }
 
-.technologies_img img {
-  animation: moving 1.5s ease-in-out  infinite;
+.technologies_img::before {
+  position: absolute;
+  content: '';
+  height: 101%;
+  width: 101%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  border: 2px solid tomato;
+  animation: animate 2s linear infinite;
+  z-index: -1;
 }
 
 .technologies_img span {
@@ -434,11 +488,10 @@ span {
 
 .projects {
   background: linear-gradient(
-    110deg,
+    45deg,
     var(--light-100),
     var(--light-400)
   );
-  transition: all 0.3s ease-in-out;
 }
 
 .projects_container {
@@ -467,31 +520,35 @@ span {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   position: relative;
+  z-index: 1;
+}
+
+.background_img::before {
+  position: absolute;
+  content: '';
+  height: 101%;
+  width: 101%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 3px solid tomato;
+  animation: animate 2s linear infinite;
+  z-index: -1;
 }
 
 .background_img .image_1 {
   position: absolute;
-  width: 40px;
+  width: 30px;
   bottom: 5rem;
-  left: 0.5rem;
-  animation: blinking 3s infinite ease-in-out;
+  left: 1rem;
 }
 
 .background_img .image_2 {
   position: absolute;
-  width: 40px;
-  bottom: 9rem;
-  left: 0.5rem;
-  animation: blinking 3s infinite ease-in-out;
-}
-
-@keyframes blinking {
-  0%{
-    opacity: 1;
-  }
-  50% {
-    opacity: .4;
-  }
+  width: 30px;
+  bottom: 8.5rem;
+  left: 1rem;
 }
 
 .grid_container {
@@ -563,7 +620,24 @@ form {
   padding: 4rem 2rem;
   border-radius: 15px;
   transition: all .3s ease-in-out;
+  position: relative;
+  justify-content: space-evenly;
 }
+
+form::before {
+  position: absolute;
+  content: '';
+  height: 101%;
+  width: 101%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  border: 2px solid tomato;
+  animation: animate 2s linear infinite;
+  z-index: -1;
+}
+
 
 fieldset {
   display: flex;
@@ -654,11 +728,11 @@ fieldset {
 
   .contact_container {
     flex-direction: row-reverse;
-    gap: 3rem;
+    gap: 6rem;
   }
 
   form {
-    max-width: 470px;
+    max-width: 465px;
   }
 
   fieldset {
@@ -749,6 +823,10 @@ fieldset {
     box-shadow: 10px 10px 30px 0px #10121423;
   }
 
+  .profile::before {
+    display: block;
+  }
+
   .hero_title {
     white-space: unset;
     overflow: auto;
@@ -817,6 +895,10 @@ fieldset {
 @media (max-width: 925px) {
   .desk {
     font-size: 9.5rem;
+  }
+
+  .contact_container {
+    gap: 3rem;
   }
   
 }
