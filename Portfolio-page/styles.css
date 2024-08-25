@@ -8,13 +8,13 @@
   --light-text-normal: #161A1D;
   --light-text-grey: #596773;
   /* Dark Mode */
-  --dark-100: #1D2125;
-  --dark-200: #22272B;
-  --dark-300: #2C333A;
-  --dark-400: #454F59;
-  --dark-text-title: #FFFFFF;
-  --dark-text-normal: #F7F8F9;
-  --dark-text-light: #F1F2F4;
+  --dark-100: #101214;
+  --dark-200: #161A1D;
+  --dark-300: #1D2125;
+  --dark-400: #22272B;
+  --dark-text-title: #F7F8F9;
+  --dark-text-normal: #DCDFE4;
+  --dark-text-light: #B3B9C4;
   /* HEADER HEIGHT */
   --header-height: 70px;
 }
@@ -29,6 +29,10 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  user-select: none;
 }
 
 body {
@@ -88,6 +92,11 @@ a {
   font-weight: 600;
   padding: 1.5rem 3rem;
   border-radius: 5px;
+ 
+}
+
+.button a {
+  color: var(--dark-text-normal);
 }
 
  @keyframes shake-horizontal {
@@ -142,6 +151,34 @@ a {
   flex-wrap: wrap;
   padding-inline: 2rem;
   position: relative;
+}
+
+.color_mode-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.color_mode-icon {
+  color: var(--light-text-grey);
+}
+
+.color_mode {
+  display: flex;
+  align-items: center;
+}
+
+.color_mode-letter::after {
+  content: "Dark Mode";
+  font-family: "Inter",sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--light-text-grey);
+}
+
+.color_mode-checkbox:checked ~ .color_mode-letter::after {
+  content: "Light Mode";
 }
 
 .menu_hamburger {
@@ -302,13 +339,15 @@ span {
 }
 
 .card {
-  box-shadow: 0px 0px 20px 0px #10121420;
+  box-shadow: 0px 0px 40px 0px #00000020;
   border-radius: 5px;
   padding: 4rem 1rem;
   max-width: 500px;
+  background-color: var(--light-200);
 }
 
 .card h3, .normal {
+  color: var(--light-text-normal);
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
@@ -335,14 +374,19 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0px 0px 20px 0px #10121415;
+  box-shadow: 0px 0px 40px 0px #00000020;
   margin: 0.5rem 0rem;
   padding: 2rem;
   border-radius: 5px;
+  background-color: var(--light-200);
 }
 
 .technologies_img img {
   animation: moving 1.5s ease-in-out  infinite;
+}
+
+.technologies_img span {
+  font-weight: 500;
 }
 
 @keyframes moving {
@@ -415,10 +459,11 @@ span {
 }
 
 .card_description {
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.7rem;
   display: block;
-  background-color: var(--light-200);
-  color: var(--light-text-normal);
+  background: linear-gradient(109.6deg, rgb(123, 90, 224) 11.2%, rgb(164, 46, 253) 32.6%, rgb(213, 56, 234) 62.7%, rgb(251, 138, 52) 100.2%);
+  color: var(--dark-text-normal);
   padding: 1rem 0;
   text-align: center;
   box-shadow: 0px 0px 20px 0px #10121433;
@@ -559,10 +604,19 @@ span {
   
 }
 
-/* @media (max-width: 768px) {
-  .desk {
-    font-size: 5.5rem;
-  } */
+/* DARK MODE */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --light-100: var(--dark-100);
+    --light-200: var(--dark-200);
+    --light-300: var(--dark-300);
+    --light-400: var(--dark-400);
+    --light-text-title: var(--dark-text-title);
+    --light-text-normal: var(--dark-text-normal);
+    --light-text-grey: var(--dark-text-light);
+  }
+} */
 
 
 
