@@ -631,6 +631,7 @@ fieldset {
   height: 4rem;
   position: sticky;
   bottom: 0;
+  z-index: 20000;
 }
 
 .footer p {
