@@ -31,10 +31,10 @@
         </label>
         <input class="menu_hamburger" type="checkbox" id="menu_hamburger">
         <ul class="ul_links">
-          <li class="li_links"><a class="link" href="#">Welcome</a></li>
-          <li class="li_links"><a class="link" href="#">About Me</a></li>
-          <li class="li_links"><a class="link" href="#">Projects</a></li>
-          <li class="li_links"><a class="link" href="#">Contact</a></li>
+          <li class="li_links"><a class="link" href="#welcome">Welcome</a></li>
+          <li class="li_links"><a class="link" href="#about_me">About Me</a></li>
+          <li class="li_links"><a class="link" href="#projects">Projects</a></li>
+          <li class="li_links"><a class="link" href="#contact">Contact</a></li>
         </ul>
       </nav>
       </div>
@@ -46,7 +46,7 @@
 
       <!-- WELCOME SECTION -->
 
-      <section class="section hero">
+      <section class="section hero" id="welcome">
         <div class="hero_container page_width">
           <span class="hero_title mobile title gradient">¡ Welcome !</span>
           <div class="title_desk">
@@ -55,20 +55,22 @@
             <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam consequatur necessitatibus quasi explicabo sapiente fugit corrupti? Error omnis illum dolorem voluptates consectetur saepe impedit aperiam expedita, eveniet soluta ea inventore.</p>
           </div>
           <div class="profile">
-            <img src="https://cdn.discordapp.com/attachments/1018595299326967953/1142312776027607050/IMG_9463.jpg?ex=66ca08ec&is=66c8b76c&hm=e630df002bc9f95be31695b97cab6d4e6b8995262a16d149e0d5eeeb4e6575ae&" alt="Berling Guzman Profile Picture" class="hero_img">
+            <div class="img_container">
+              <img src="https://raw.githubusercontent.com/berlinguzman/Prueba-Git/main/projects-img/IMG_9463.jpg" alt="Berling Guzman Profile Picture" class="hero_img">
+            </div>
             <p class="name title">Berling Guzman<span>( FRONT END DEVELOPER )</span></p>
             <div class="buttons">
               <div class="button github">
                 <img src="https://img.icons8.com/?size=100&id=12599&format=png&color=ffffff" alt="GitHub icon">
-                <a href="#">GitHub</a>
+                <a href="https://github.com/berlinguzman" target="_blank">GitHub</a>
               </div>
               <div class="button freecode">
                 <img src="https://img.icons8.com/?size=100&id=qrFmEbaCDdJA&format=png&color=ffffff" alt="FreeCodeCamp icon">
-                <a href="#">FreeCode</a>
+                <a href="https://www.freecodecamp.org/skill_issue" target="_blank">FreeCode</a>
               </div>
               <div class="button discord">
                 <img src="https://img.icons8.com/?size=100&id=30888&format=png&color=ffffff" alt="Discord icon">
-                <a href="discordapp.com/users/656048967875952641">Discord</a>
+                <a href="discordapp.com/users/656048967875952641" target="_blank">Discord</a>
               </div>
             </div>
         </div>
@@ -77,7 +79,7 @@
 
       <!-- ABOUT ME SECTION -->
 
-      <section class="section about_me">
+      <section class="section about_me" id="about_me">
         <h2 class="title gradient">About me</h2>
         <div class="about_me-container page_width">
           <div class="cards">
@@ -112,7 +114,7 @@
 
       <!-- PROJECTS SECTION  -->
 
-      <section class="section projects">
+      <section class="section projects" id="projects">
         <div class="projects_container page_width">
           <h2 class="title gradient">Projects</h2>
           <div class="grid_container">
@@ -141,7 +143,7 @@
       </section>
 
       <!-- CONTACT SECTION -->
-      <section class="section"></section>
+      <section class="section" id="contact"></section>
     </main>
 
     <!-- JAVASCRIPT -->

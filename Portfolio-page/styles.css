@@ -23,6 +23,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 *, ::before, ::after {
@@ -54,6 +55,7 @@ ol, ul {
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
+  transition: all 0.3s ease-in-out;
 }
 
 .link {
@@ -63,7 +65,6 @@ ol, ul {
   font-style: normal;
   font-size: 1.4rem;
   color: var(--light-text-title);
-
 }
 
 .text {
@@ -71,6 +72,7 @@ ol, ul {
   font-weight: 300;
   font-style: normal;
   color: var(--light-text-normal);
+  transition: all 0.3s ease-in-out;
 }
 
 .section {
@@ -141,6 +143,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 1;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbar {
@@ -162,6 +165,7 @@ a {
 
 .color_mode-icon {
   color: var(--light-text-grey);
+  transition: all 0.3s ease-in-out;
 }
 
 .color_mode {
@@ -170,15 +174,16 @@ a {
 }
 
 .color_mode-letter::after {
-  content: "Dark Mode";
+  content: "Dark";
   font-family: "Inter",sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
   color: var(--light-text-grey);
+  transition: all 0.3s ease-in-out;
 }
 
 .color_mode-checkbox:checked ~ .color_mode-letter::after {
-  content: "Light Mode";
+  content: "Light";
 }
 
 .menu_hamburger {
@@ -237,6 +242,7 @@ a {
   );
   margin-top: -70px;
   padding-top: 70px;
+  transition: all 0.3s ease-in-out;
 }
 
 .hero_container {
@@ -253,6 +259,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .name {
@@ -261,6 +268,7 @@ a {
   font-weight: 600;
   font-family: monospace;
   white-space: nowrap;
+  transition: all 0.3s ease-in-out;
 }
 
 span {
@@ -271,13 +279,20 @@ span {
   text-align: center;
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+
+.img_container {
+  border-radius: 50%;
+  overflow: hidden;
+  background-image: repeating-linear-gradient(0deg, hsla(209,48%,96%,0.05) 0px, hsla(209,48%,96%,0.05) 1px,transparent 1px, transparent 11px,hsla(209,48%,96%,0.05) 11px, hsla(209,48%,96%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(45deg, hsla(209,48%,96%,0.05) 0px, hsla(209,48%,96%,0.05) 1px,transparent 1px, transparent 11px,hsla(209,48%,96%,0.05) 11px, hsla(209,48%,96%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(209,48%,96%,0.05) 0px, hsla(209,48%,96%,0.05) 1px,transparent 1px, transparent 11px,hsla(209,48%,96%,0.05) 11px, hsla(209,48%,96%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(45deg, hsla(209,48%,96%,0.05) 0px, hsla(209,48%,96%,0.05) 1px,transparent 1px, transparent 11px,hsla(209,48%,96%,0.05) 11px, hsla(209,48%,96%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(86, 47, 241),rgb(58, 148, 195));
+  padding: 1rem;
+  box-shadow: 0px 0px 45px 0px #10121444;
 }
 
 .hero_img {
   max-width: 250px;
   border-radius: 50%;
-  border: 10px solid var(--light-300);
-  box-shadow: 0px 0px 45px 0px #10121444;
 }
 
 .hero_title {
@@ -287,10 +302,16 @@ span {
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
+  transition: all .3s ease-in-out;
 }
 
 .title_desk {
   display: none;
+}
+
+.title_desk p {
+  color: var(--light-text-grey);
+  transition: all 0.3s ease-in-out;
 }
 
 .buttons {
@@ -317,6 +338,7 @@ span {
   display: flex;
   flex-direction: column;
   gap: 6rem;
+  background-image: linear-gradient(222deg, rgba(137, 137, 137,0.02) 0%, rgba(137, 137, 137,0.02) 21%,transparent 21%, transparent 63%,rgba(101, 101, 101,0.02) 63%, rgba(101, 101, 101,0.02) 99%,rgba(35, 35, 35,0.02) 99%, rgba(35, 35, 35,0.02) 100%),linear-gradient(267deg, rgba(40, 40, 40,0.02) 0%, rgba(40, 40, 40,0.02) 23%,transparent 23%, transparent 48%,rgba(87, 87, 87,0.02) 48%, rgba(87, 87, 87,0.02) 98%,rgba(47, 47, 47,0.02) 98%, rgba(47, 47, 47,0.02) 100%),linear-gradient(78deg, rgba(103, 103, 103,0.02) 0%, rgba(103, 103, 103,0.02) 40%,transparent 40%, transparent 64%,rgba(100, 100, 100,0.02) 64%, rgba(100, 100, 100,0.02) 84%,rgba(35, 35, 35,0.02) 84%, rgba(35, 35, 35,0.02) 100%),linear-gradient(136deg, rgba(135, 135, 135,0.02) 0%, rgba(135, 135, 135,0.02) 14%,transparent 14%, transparent 67%,rgba(51, 51, 51,0.02) 67%, rgba(51, 51, 51,0.02) 68%,rgba(178, 178, 178,0.02) 68%, rgba(178, 178, 178,0.02) 100%),linear-gradient(90deg, var(--light-100),var(--light-100));
 }
 
 .about_me-container {
@@ -324,6 +346,7 @@ span {
   flex-direction: column;
   gap: 7rem;
   width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
 .about_me h2 {
@@ -336,6 +359,7 @@ span {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .card {
@@ -344,6 +368,7 @@ span {
   padding: 4rem 1rem;
   max-width: 500px;
   background-color: var(--light-200);
+  transition: all 0.3s ease-in-out;
 }
 
 .card h3, .normal {
@@ -352,6 +377,7 @@ span {
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .card p {
@@ -360,6 +386,7 @@ span {
   line-height: 2.5rem;
   text-wrap: pretty;
   color: var(--light-text-grey);
+  transition: all 0.3s ease-in-out;
 }
 
 .technologies_container {
@@ -367,6 +394,7 @@ span {
   justify-content: center;
   margin-top: 5rem;
   gap: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .technologies_img {
@@ -379,6 +407,7 @@ span {
   padding: 2rem;
   border-radius: 5px;
   background-color: var(--light-200);
+  transition: all 0.3s ease-in-out;
 }
 
 .technologies_img img {
@@ -387,6 +416,7 @@ span {
 
 .technologies_img span {
   font-weight: 500;
+  transition: all 0.3s ease-in-out;
 }
 
 @keyframes moving {
@@ -406,6 +436,7 @@ span {
     var(--light-100),
     var(--light-400)
   );
+  transition: all 0.3s ease-in-out;
 }
 
 .projects_container {
@@ -413,10 +444,12 @@ span {
   display: flex;
   flex-direction: column;
   gap: 7rem;
+  transition: all 0.3s ease-in-out;
 }
 .projects h2 {
   font-size: 4rem;
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .background_img {
@@ -430,12 +463,14 @@ span {
   background-repeat: no-repeat;
   box-shadow: 0px 0px 20px 0px #10121433;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 .grid_container {
   display: grid;
   gap: 4rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 40em), 1fr));
+  transition: all 0.3s ease-in-out;
 }
 
 .grid_card-1 {
@@ -462,11 +497,12 @@ span {
   font-weight: 600;
   font-size: 1.7rem;
   display: block;
-  background: linear-gradient(109.6deg, rgb(123, 90, 224) 11.2%, rgb(164, 46, 253) 32.6%, rgb(213, 56, 234) 62.7%, rgb(251, 138, 52) 100.2%);
+  background-image: repeating-linear-gradient(0deg, hsla(209,48%,96%,0.05) 0px, hsla(209,48%,96%,0.05) 1px,transparent 1px, transparent 11px,hsla(209,48%,96%,0.05) 11px, hsla(209,48%,96%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(45deg, hsla(209,48%,96%,0.05) 0px, hsla(209,48%,96%,0.05) 1px,transparent 1px, transparent 11px,hsla(209,48%,96%,0.05) 11px, hsla(209,48%,96%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(209,48%,96%,0.05) 0px, hsla(209,48%,96%,0.05) 1px,transparent 1px, transparent 11px,hsla(209,48%,96%,0.05) 11px, hsla(209,48%,96%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(45deg, hsla(209,48%,96%,0.05) 0px, hsla(209,48%,96%,0.05) 1px,transparent 1px, transparent 11px,hsla(209,48%,96%,0.05) 11px, hsla(209,48%,96%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(86, 47, 241),rgb(58, 148, 195));
   color: var(--dark-text-normal);
   padding: 1rem 0;
   text-align: center;
   box-shadow: 0px 0px 20px 0px #10121433;
+  transition: all 0.3s ease-in-out;
 }
 
 /* MEDIA QUERIES */
@@ -479,6 +515,11 @@ span {
 
   .button:hover {
     animation: shake-horizontal 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  }
+
+  .background_img:hover {
+    transform: scale(1.05);
+    transition: all .3s ease-in-out;
   }
 
   .section {
@@ -566,21 +607,20 @@ span {
   }
 
   .ul_links a {
-    background: var(--light-text-grey);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
     display: inline-flex;
     align-items: center;
     font-size: 1.8rem;
     padding-inline: 3rem;
     height: var(--header-height);
+    background-image: linear-gradient(37deg, rgb(32, 218, 233),rgb(40, 21, 236));
   }
 
   .ul_links a:hover {
-    background: linear-gradient(109.6deg, rgb(123, 90, 224) 11.2%, rgb(164, 46, 253) 32.6%, rgb(213, 56, 234) 62.7%, rgb(251, 138, 52) 100.2%);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-
+    transform: scale(1.05);
+    background-image: linear-gradient(0deg, rgb(238, 4, 44),rgb(202, 203, 40));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all .3s ease-in-out;    
   }
 }
 

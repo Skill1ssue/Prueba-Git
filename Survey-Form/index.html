@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Help us to improve our services.</p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label">Name: <input id="name" type="text" name="name" placeholder="Jhon Doe" required></label>
+        <label id="email-label">Email: <input id="email" type="email" name="email" placeholder="jhondoe@gmail.com" required></label>
+        <label id="number-label">Age: <input id="number" type="number" min="18" max="60" name="age" placeholder="35"></label>
+        <label for="dropdown">
+          What's your education level?
+          <select id="dropdown" name="education-level">
+            <option>(select one)</option>
+            <option>Highschool</option>
+            <option>College</option>
+            <option>Degree</option>
+            <option>Doctorate</option>
+          </select>
+        </label>
+        <label>
+          Gender:
+          <br>
+          <input class="inline" type="radio" name="gender" value="male">Male
+          <input class="inline" type="radio" name="gender" value="female">Female
+          <input class="inline" type="radio" name="gender" value="dont-say">Don't say
+        </label>
+        <label>
+          Programming language you'd like to learn:
+          <br>
+          <input class="inline" type="checkbox" value="javascript"> JavaScript
+          <input class="inline" type="checkbox" value="python"> Python
+          <input class="inline" type="checkbox" value="java"> Java
+          <input class="inline" type="checkbox" value="rust"> Rust
+          <input class="inline" type="checkbox" value="php"> PHP
+        </label>
+        <label>
+          Additional comments about you:
+          <textarea rows="8" cols="40"></textarea>
+        </label>
+      </fieldset>
+      <button id="submit">Submit</button>
+    </form>
+  </body>
+</html>
