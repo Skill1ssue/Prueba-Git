@@ -552,6 +552,10 @@ span {
   text-wrap: balance;
 }
 
+.contact_data img {
+  display: none;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -573,7 +577,7 @@ fieldset {
   flex-direction: column;
 }
 
-.form_container label {
+.contact_container label {
   display: block;
   font-family: "Inter",sans-serif;
   font-size: 2.2rem;
@@ -609,7 +613,7 @@ fieldset {
 #submit {
   background: linear-gradient(109.6deg, rgb(123, 90, 224) 11.2%, rgb(164, 46, 253) 32.6%, rgb(213, 56, 234) 62.7%, rgb(251, 138, 52) 100.2%);
   color: var(--dark-text-title);
-  font-size: 2.4rem;
+  font-size: 2rem;
   margin: 0;
   height: 50px;
   width: 200px;
@@ -617,18 +621,43 @@ fieldset {
   border: none;
 }
 
+/* FOOTER */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(109.6deg, rgb(123, 90, 224) 11.2%, rgb(164, 46, 253) 32.6%, rgb(213, 56, 234) 62.7%, rgb(251, 138, 52) 100.2%);
+  height: 4rem;
+  position: sticky;
+  bottom: 0;
+}
+
+.footer p {
+  color: var(--dark-text-title);
+}
+
 
 /* MEDIA QUERIES */
 
 @media (min-width:768px){
+
+  .footer{
+    height: 3rem;
+  }
+
+  .about_me, .projects, .contact {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+  }
 
   .contact_container {
     flex-direction: row-reverse;
     gap: 3rem;
   }
 
-  .form_container {
-    max-width: 500px;
+  form {
+    max-width: 470px;
   }
 
   fieldset {
@@ -636,6 +665,12 @@ fieldset {
     justify-content: space-between;
     flex-wrap: wrap;
  
+  }
+
+  .contact_data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .contact_data h3 {
@@ -647,6 +682,14 @@ fieldset {
   .contact_data p {
     text-align: left;
     text-wrap: pretty;
+  }
+
+  .contact_data img {
+    display: block;
+    object-fit: contain;
+    max-width: 250px;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
   }
 
   .page_width {
@@ -786,7 +829,7 @@ fieldset {
 
 /* DARK MODE */
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --light-100: var(--dark-100);
     --light-200: var(--dark-200);
@@ -796,7 +839,7 @@ fieldset {
     --light-text-normal: var(--dark-text-normal);
     --light-text-grey: var(--dark-text-light);
   }
-} */
+}
 
 
 
